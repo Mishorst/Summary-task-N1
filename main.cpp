@@ -10,6 +10,24 @@ class AbstractSubject {
         
     public:
         string StartDate;
+
+        // setter
+        void setSubjectName(string SubjectName){
+            this->SubjectName = SubjectName;
+        }
+
+        void setSubjectDuration(string SubjectDuration){
+            this->SubjectDuration = SubjectDuration;
+        }
+
+        // getter
+        string getSubjcetName(){
+            return SubjectName;
+        }
+
+        string getSubjectDuration(){
+            return SubjectDuration;
+        }
 };
 
 class SkillWillSubject: public AbstractSubject {
@@ -21,6 +39,16 @@ class SkillWillSubject: public AbstractSubject {
             this->SubjectName = SubjectName;
             this->SubjectDuration = SubjectDuration;
             this->StartDate = StartDate;
+        }
+
+        // setter
+        void setLastLectureName(string LastLectureName){
+            this->LastLectureName = LastLectureName;
+        }
+
+        // getter
+        string getLastLectureName(){
+            return LastLectureName;
         }
 };
 
@@ -34,6 +62,32 @@ class AbstractLecturer {
     
         void conductingLecture(){
             cout << "Lecturer is conducting a Lecture" << endl;
+        }
+
+        // setter
+        void setName(string Name){
+            this->Name = Name;
+        }
+
+        void setSurname(string Surname){
+            this->Surname = Surname;
+        }
+
+        void setSubjcetName(string SubjectName){
+            this->SubjectName = SubjectName;
+        }
+
+        // getter
+        string getName(){
+            return Name;
+        }
+
+        string getSurname(){
+            return Surname;
+        }
+
+        string getSubjcetName(){
+            return SubjectName;
         }
 };
 
@@ -62,6 +116,24 @@ class SkillWillLecturer: public AbstractLecturer {
                 cout << "No exact information" << endl;
             }
         }
+
+        // setter
+        void setChapter(string Chapter){
+            this->Chapter = Chapter;
+        }
+
+        void setLevel(string Level){
+            this->Level = Level;
+        }
+
+        // getter
+        string getChapter(){
+            return Chapter;
+        }
+
+        string getLevel(){
+            return Level;
+        }
 };
 
 class AbstractStudent {
@@ -76,6 +148,40 @@ class AbstractStudent {
         void attendLecture(){
             cout << "Student attends the lecture" << endl;
         };
+
+        // setter
+        void setName(string Name){
+            this->Name = Name;
+        }
+
+        void setSurname(string Surname){
+            this->Surname = Surname;
+        }
+
+        void setAge(int Age){
+            this->Age = Age;
+        }
+
+        void setSubjcetName(string SubjectName){
+            this->SubjectName = SubjectName;
+        }
+
+        // getter
+        string getName(){
+            return Name;
+        }
+
+        string getSurname(){
+            return Surname;
+        }
+
+        int getAge(){
+            return Age;
+        }
+
+        string getSubjcetName(){
+            return SubjectName;
+        }
 };
 
 class SkillWillStudent: public AbstractStudent {
@@ -115,6 +221,32 @@ class SkillWillStudent: public AbstractStudent {
             } else {
                 cout << "Wrong student's name or subject's name" << endl;
             }
+        }
+
+        // setter
+        void setSection(char Section){
+            this->Section = Section;
+        }
+
+        void setCourse(int Course){
+            this->Course = Course;
+        }
+
+        void setQuizPoints(int QuizPoints){
+            this->QuizPoints = QuizPoints;
+        }
+
+        // getter
+        char getSection(){
+            return Section;
+        }
+
+        int getCourse(){
+            return Course;
+        }
+
+        int getQuizPoints(){
+            return QuizPoints;
         }
 };
 
